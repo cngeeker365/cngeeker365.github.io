@@ -1,0 +1,20 @@
+sudo: false
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
+cache: npm
+branches:
+  only:
+    - src # 改为监视src分支
+script:
+  - hexo generate # generate static files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  target_branch: master # 发布目标为master分支
+  keep-history: true
+  on:
+    branch: src # 发布来源为src分支
+  verbose: true
+  local-dir: public
