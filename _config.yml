@@ -89,4 +89,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/cngeeker365/cngeeker365.github.io.git
+  branch: master
