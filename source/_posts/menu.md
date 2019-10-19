@@ -5,10 +5,11 @@ tags:
 ---
 * [首页](/home)
 * 运维
-* 开发
-  * golang
-  * python
-  * java
+* [开发](/dev)
+  * [golang](/dev/golang)
+    * [test](/dev/golang/test)
+  * [python](/dev/python)
+  * [java](/dev/java)
 * 读书
 * 生活
 * 乱弹
