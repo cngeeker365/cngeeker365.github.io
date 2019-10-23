@@ -118,6 +118,7 @@ markdown:
     - markdown-it-sup
     - markdown-it-checkbox
     - '@iktakahiro/markdown-it-katex'
+    - hexo-filter-flowchart
   anchors:
     # Minimum level for ID creation. (Ex. h2 to h6)
     level: 1
@@ -128,4 +129,9 @@ markdown:
     # Class used for the permalink anchor tag.
     permalinkClass: header-anchor
     # The symbol used to make the permalink
-    permalinkSymbol: '# '    
+    permalinkSymbol: '# '
+
+flowchart:
+  # raphael:   # optional, the source url of raphael.js
+  # flowchart: # optional, the source url of flowchart.js
+  options: # options used for `drawSVG`  
