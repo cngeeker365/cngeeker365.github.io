@@ -94,3 +94,7 @@ deploy:
   type: git
   repo: https://github.com/cngeeker365/cngeeker365.github.io.git
   branch: master
+
+markdown:
+  plugins:
+    - '@iktakahiro/markdown-it-katex'
