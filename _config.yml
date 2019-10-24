@@ -117,7 +117,7 @@ markdown:
     - markdown-it-sub
     - markdown-it-sup
     - markdown-it-checkbox
-    - '@iktakahiro/markdown-it-katex'
+    # - '@iktakahiro/markdown-it-katex'
     - hexo-filter-flowchart
   anchors:
     # Minimum level for ID creation. (Ex. h2 to h6)
