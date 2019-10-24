@@ -117,8 +117,6 @@ markdown:
     - markdown-it-sub
     - markdown-it-sup
     - markdown-it-checkbox
-    # - '@iktakahiro/markdown-it-katex'
-    - hexo-filter-flowchart
   anchors:
     # Minimum level for ID creation. (Ex. h2 to h6)
     level: 1
@@ -134,4 +132,4 @@ markdown:
 flowchart:
   # raphael:   # optional, the source url of raphael.js
   # flowchart: # optional, the source url of flowchart.js
-  options: # options used for `drawSVG`  
+  options: # options used for `drawSVG`
