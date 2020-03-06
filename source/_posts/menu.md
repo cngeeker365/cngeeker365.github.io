@@ -11,10 +11,10 @@ tags:
   * [python](/dev/python)
   * [java](/dev/java)
 * [读书](/reading)
-  * [佛教](/reading/佛教)
-    * [药师经](/reading/佛教/药师经)
-      * [经文](/reading/佛教/药师经/经文)
-      * [药师经的济世观](/reading/佛教/药师经/药师经的济世观)
+  * [佛教](/reading/fojiao)
+    * [药师经](/reading/fojiao/yaoshijing)
+      * [经文](/reading/fojiao/yaoshijing/yaoshijing)
+      * [药师经的济世观](/reading/fojiao/yaoshijing/yaoshijingdejishiguan)
 * 生活
 * 乱弹
 
