@@ -12,6 +12,7 @@ tags:
   * [java](/dev/java)
 * [读书](/reading)
   * [佛教](/reading/fojiao)
+    * [心经](/reading/fojiao/xinjing)
     * [药师经](/reading/fojiao/yaoshijing)
       * [经文](/reading/fojiao/yaoshijing/jingwen)
       * [药师经的济世观](/reading/fojiao/yaoshijing/jishiguan)
