@@ -8,6 +8,7 @@ tags:
 * [开发](/dev)
   * [golang](/dev/golang)
     * [test](/dev/golang/test)
+    * [test2](/dev/golang/test2)
   * [python](/dev/python)
   * [java](/dev/java)
 * [读书](/reading)
