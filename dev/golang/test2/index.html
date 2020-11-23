@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.ico" />
+    
+
+    <title>
+        
+          dev/golang/test2 - 桃白白の野望
+        
+    </title>
+
+    <!-- Spectre.css framework (v0.5.8) -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <!-- Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
+    <!-- Noto Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <!-- theme css & js -->
+    <link rel="stylesheet" href="/css/spectre_custom.css">
+    <link rel="stylesheet" href="/css/book.css">
+    <script src="/js/book.js"></script>
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+</head>
+
+<body>
+
+<div class="container">
+  <div class="book-container">
+    <div class="columns">
+      <div class="column col-2 hide-lg">
+        <div class="book-sidebar">
+  <h4 class="site-meta">
+    <a href="/">桃白白の野望</a>
+  </h4>
+  <div class="sidebar-content">
+    <ul>
+<li><a href="/home">首页</a></li>
+<li>运维</li>
+<li><a href="/dev">开发</a>
+<ul>
+<li><a href="/dev/golang">golang</a>
+<ul>
+<li><a href="/dev/golang/test">test</a></li>
+<li><a href="/dev/golang/test2">test2</a></li>
+</ul>
+</li>
+<li><a href="/dev/python">python</a></li>
+<li><a href="/dev/java">java</a></li>
+</ul>
+</li>
+<li><a href="/reading">读书</a>
+<ul>
+<li><a href="/reading/fojiao">佛教</a>
+<ul>
+<li><a href="/reading/fojiao/xinjing">心经</a></li>
+<li><a href="/reading/fojiao/yaoshijing">药师经</a>
+<ul>
+<li><a href="/reading/fojiao/yaoshijing/jingwen">经文</a></li>
+<li><a href="/reading/fojiao/yaoshijing/jishiguan">药师经的济世观</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>生活</li>
+<li>乱弹</li>
+</ul>
+
+  </div>
+</div>
+
+<script src="/js/book-sidebar.js"></script>
+      </div>
+
+      <div class="column col-8 col-lg-12">
+        <div class="book-content">
+          <div class="book-navbar">
+  <header class="navbar">
+  <section class="navbar-section">
+    <img class="navbar-icon" src="/favicon.ico">
+  </section>
+  <section class="navbar-center">
+    桃白白の野望
+  </section>
+  <section class="navbar-section">
+    <label class="accordion-header c-hand" for="accordion-sidebar">
+      <i class="icon icon-menu"></i>
+    </label>
+  </section>
+</header>
+
+<div class="accordion">
+  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
+  <div class="accordion-body">
+    <ul>
+<li><a href="/home">首页</a></li>
+<li>运维</li>
+<li><a href="/dev">开发</a>
+<ul>
+<li><a href="/dev/golang">golang</a>
+<ul>
+<li><a href="/dev/golang/test">test</a></li>
+<li><a href="/dev/golang/test2">test2</a></li>
+</ul>
+</li>
+<li><a href="/dev/python">python</a></li>
+<li><a href="/dev/java">java</a></li>
+</ul>
+</li>
+<li><a href="/reading">读书</a>
+<ul>
+<li><a href="/reading/fojiao">佛教</a>
+<ul>
+<li><a href="/reading/fojiao/xinjing">心经</a></li>
+<li><a href="/reading/fojiao/yaoshijing">药师经</a>
+<ul>
+<li><a href="/reading/fojiao/yaoshijing/jingwen">经文</a></li>
+<li><a href="/reading/fojiao/yaoshijing/jishiguan">药师经的济世观</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>生活</li>
+<li>乱弹</li>
+</ul>
+
+  </div>
+</div>
+</div>
+
+<div class="book-post">
+  <h3 id="参考文档">参考文档</h3>
+<ul>
+<li><a href="https://support.typora.io/Draw-Diagrams-With-Markdown/" target="_blank" rel="noopener">Draw Diagrams With Markdown</a></li>
+</ul>
+<h3 id="图形分类">图形分类</h3>
+<h4 id="时序图">时序图</h4>
+<h5 id="方式一">方式一</h5>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```sequence</span><br><span class="line">Alice-&gt;Bob: Hello Bob, how are you?</span><br><span class="line">Note right of Bob: Bob thinks</span><br><span class="line">Bob--&gt;Alice: I am good thanks!</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Alice-&gt;Bob: Hello Bob, how are you?</span><br><span class="line">Note right of Bob: Bob thinks</span><br><span class="line">Bob--&gt;Alice: I am good thanks!</span><br></pre></td></tr></table></figure>
+<h5 id="方式二">方式二</h5>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">%% Example of sequence diagram</span><br><span class="line">  sequenceDiagram</span><br><span class="line">    Alice-&gt;&gt;Bob: Hello Bob, how are you?</span><br><span class="line">    alt is sick</span><br><span class="line">    Bob-&gt;&gt;Alice: Not so good :(</span><br><span class="line">    else is well</span><br><span class="line">    Bob-&gt;&gt;Alice: Feeling fresh like a daisy</span><br><span class="line">    end</span><br><span class="line">    opt Extra response</span><br><span class="line">    Bob-&gt;&gt;Alice: Thanks for asking</span><br><span class="line">    end</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">%% Example of sequence diagram</span><br><span class="line">  sequenceDiagram</span><br><span class="line">    Alice-&gt;&gt;Bob: Hello Bob, how are you?</span><br><span class="line">    alt is sick</span><br><span class="line">    Bob-&gt;&gt;Alice: Not so good :(</span><br><span class="line">    else is well</span><br><span class="line">    Bob-&gt;&gt;Alice: Feeling fresh like a daisy</span><br><span class="line">    end</span><br><span class="line">    opt Extra response</span><br><span class="line">    Bob-&gt;&gt;Alice: Thanks for asking</span><br><span class="line">    end</span><br></pre></td></tr></table></figure>
+<h4 id="流程图">流程图</h4>
+<h5 id="方式一-v2">方式一</h5>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;flowchart-0&quot; class=&quot;flow-chart&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<div id="flowchart-1" class="flow-chart"></div>
+<h5 id="方式二-v2">方式二</h5>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">graph LR</span><br><span class="line">A[Hard edge] --&gt;B(Round edge)</span><br><span class="line">    B --&gt; C&#123;Decision&#125;</span><br><span class="line">    C --&gt;|One| D[Result one]</span><br><span class="line">    C --&gt;|Two| E[Result two]</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[Hard edge] --&gt;B(Round edge)</span><br><span class="line">    B --&gt; C&#123;Decision&#125;</span><br><span class="line">    C --&gt;|One| D[Result one]</span><br><span class="line">    C --&gt;|Two| E[Result two]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">graph LR</span><br><span class="line">A[Sonar Standard] --&gt; B(CWE)</span><br><span class="line">A --&gt; C(SANS)</span><br><span class="line">A --&gt; D(OWASP)</span><br><span class="line">A --&gt; E(MISRA)</span><br><span class="line">A --&gt; F(CERT)</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[Sonar Standard] --&gt; B(CWE)</span><br><span class="line">A --&gt; C(SANS)</span><br><span class="line">A --&gt; D(OWASP)</span><br><span class="line">A --&gt; E(MISRA)</span><br><span class="line">A --&gt; F(CERT)</span><br></pre></td></tr></table></figure>
+<h4 id="甘特图"><a href="https://mermaid-js.github.io/mermaid/diagrams-and-syntax-and-examples/gantt.html" target="_blank" rel="noopener">甘特图</a></h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">gantt</span><br><span class="line">    title 甘特图</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section Section</span><br><span class="line">    A task           :a1, 2014-01-01, 30d</span><br><span class="line">    Another task     :after a1  , 20d</span><br><span class="line">    section Another</span><br><span class="line">    Task in sec      :2014-01-12  , 12d</span><br><span class="line">    another task      : 24d</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">    title 甘特图</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section Section</span><br><span class="line">    A task           :a1, 2014-01-01, 30d</span><br><span class="line">    Another task     :after a1  , 20d</span><br><span class="line">    section Another</span><br><span class="line">    Task in sec      :2014-01-12  , 12d</span><br><span class="line">    another task      : 24d</span><br></pre></td></tr></table></figure>
+<h4 id="类图"><a href="https://mermaid-js.github.io/mermaid/diagrams-and-syntax-and-examples/classDiagram.html" target="_blank" rel="noopener">类图</a></h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">classDiagram</span><br><span class="line">      Animal &lt;|-- Duck</span><br><span class="line">      Animal &lt;|-- Fish</span><br><span class="line">      Animal &lt;|-- Zebra</span><br><span class="line">      Animal : +int age</span><br><span class="line">      Animal : +String gender</span><br><span class="line">      Animal: +isMammal()</span><br><span class="line">      Animal: +mate()</span><br><span class="line">      class Duck&#123;</span><br><span class="line">          +String beakColor</span><br><span class="line">          +swim()</span><br><span class="line">          +quack()</span><br><span class="line">      &#125;</span><br><span class="line">      class Fish&#123;</span><br><span class="line">          -int sizeInFeet</span><br><span class="line">          -canEat()</span><br><span class="line">      &#125;</span><br><span class="line">      class Zebra&#123;</span><br><span class="line">          +bool is_wild</span><br><span class="line">          +run()</span><br><span class="line">      &#125;</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">      Animal &lt;|-- Duck</span><br><span class="line">      Animal &lt;|-- Fish</span><br><span class="line">      Animal &lt;|-- Zebra</span><br><span class="line">      Animal : +int age</span><br><span class="line">      Animal : +String gender</span><br><span class="line">      Animal: +isMammal()</span><br><span class="line">      Animal: +mate()</span><br><span class="line">      class Duck&#123;</span><br><span class="line">          +String beakColor</span><br><span class="line">          +swim()</span><br><span class="line">          +quack()</span><br><span class="line">      &#125;</span><br><span class="line">      class Fish&#123;</span><br><span class="line">          -int sizeInFeet</span><br><span class="line">          -canEat()</span><br><span class="line">      &#125;</span><br><span class="line">      class Zebra&#123;</span><br><span class="line">          +bool is_wild</span><br><span class="line">          +run()</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="状态图"><a href="https://mermaid-js.github.io/mermaid/diagrams-and-syntax-and-examples/stateDiagram.html" target="_blank" rel="noopener">状态图</a></h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">stateDiagram-v2</span><br><span class="line">    [*] --&gt; Still</span><br><span class="line">    Still --&gt; [*]</span><br><span class="line"></span><br><span class="line">    Still --&gt; Moving</span><br><span class="line">    Moving --&gt; Still</span><br><span class="line">    Moving --&gt; Crash</span><br><span class="line">    Crash --&gt; [*]</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">stateDiagram-v2</span><br><span class="line">    [*] --&gt; Still</span><br><span class="line">    Still --&gt; [*]</span><br><span class="line"></span><br><span class="line">    Still --&gt; Moving</span><br><span class="line">    Moving --&gt; Still</span><br><span class="line">    Moving --&gt; Crash</span><br><span class="line">    Crash --&gt; [*]</span><br></pre></td></tr></table></figure>
+<h4 id="饼图">饼图</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">pie</span><br><span class="line">    title Pie Chart</span><br><span class="line">    &quot;Dogs&quot; : 386</span><br><span class="line">    &quot;Cats&quot; : 85</span><br><span class="line">    &quot;Rats&quot; : 150 </span><br><span class="line">    &quot;cows&quot; : 211</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pie</span><br><span class="line">    title Pie Chart</span><br><span class="line">    &quot;Dogs&quot; : 386</span><br><span class="line">    &quot;Cats&quot; : 85</span><br><span class="line">    &quot;Rats&quot; : 150 </span><br><span class="line">    &quot;cows&quot; : 211</span><br></pre></td></tr></table></figure>
+<h4 id="用户旅程图">用户旅程图</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">journey</span><br><span class="line">    title My working day</span><br><span class="line">    section Go to work</span><br><span class="line">      Make tea: 5: Me</span><br><span class="line">      Go upstairs: 3: Me</span><br><span class="line">      Do work: 1: Me, Cat</span><br><span class="line">    section Go home</span><br><span class="line">      Go downstairs: 5: Me</span><br><span class="line">      Sit down: 5: Me</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">journey</span><br><span class="line">    title My working day</span><br><span class="line">    section Go to work</span><br><span class="line">      Make tea: 5: Me</span><br><span class="line">      Go upstairs: 3: Me</span><br><span class="line">      Do work: 1: Me, Cat</span><br><span class="line">    section Go home</span><br><span class="line">      Go downstairs: 5: Me</span><br><span class="line">      Sit down: 5: Me</span><br></pre></td></tr></table></figure>
+<h4 id="git图">git图</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">gitGraph:</span><br><span class="line">options</span><br><span class="line">&#123;</span><br><span class="line">    &quot;nodeSpacing&quot;: 150,</span><br><span class="line">    &quot;nodeRadius&quot;: 10</span><br><span class="line">&#125;</span><br><span class="line">end</span><br><span class="line">commit</span><br><span class="line">branch newbranch</span><br><span class="line">checkout newbranch</span><br><span class="line">commit</span><br><span class="line">commit</span><br><span class="line">checkout master</span><br><span class="line">commit</span><br><span class="line">commit</span><br><span class="line">merge newbranch</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<pre><code class="language-mermaid">gitGraph:
+options
+{
+    &quot;nodeSpacing&quot;: 150,
+    &quot;nodeRadius&quot;: 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+```&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js&quot;&gt;&lt;/script&gt;{% raw %}<textarea id="flowchart-0-code" style="display: none">st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+
+st->op->cond
+cond(yes)->e
+cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>{% endraw %}{% raw %}<textarea id="flowchart-1-code" style="display: none">st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+
+st(right)->op(right)->cond
+cond(yes)->e
+cond(no)->op</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script>{% endraw %}</code></pre>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+  </div>
+
+
+<script src="/js/book-post.js"></script>
+        </div>
+      </div>
+
+      <div class="column col-2 hide-lg">
+        <div class="book-toc">
+  <div class="book-tocbot">
+  </div>
+  <div class="book-tocbot-menu">
+    <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+    <a onclick="go_top()">Back to top</a>
+    <a onclick="go_bottom()">Go to bottom</a>
+  </div>
+</div>
+
+<script>
+tocbot.init({
+  tocSelector: '.book-tocbot',
+  contentSelector: '.book-post',
+  headingSelector: 'h1, h2, h3, h4, h5',
+  collapseDepth: 2,
+  orderedList: false,
+  scrollSmooth: false,
+});
+
+function expand_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 6,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "collapse_toc()");
+  b.innerHTML = "Collapse all"
+}
+
+function collapse_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 2,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "expand_toc()");
+  b.innerHTML = "Expand all"
+}
+
+function go_top() {
+  window.scrollTo(0, 0);
+}
+
+function go_bottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+</script>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
