@@ -4,13 +4,13 @@ date: 2019-10-17 11:34:57
 tags:
 ---
 * [首页](/home)
-* 运维
+* [技术](/tech)
+* [工具](/tools)
+  * [软件配置](/tools/软件配置)
+    * [Mac配置](/tools/软件配置/mac配置)
 * [开发](/dev)
   * [golang](/dev/golang)
     * [test](/dev/golang/test)
-    * [test2](/dev/golang/test2)
-  * [python](/dev/python)
-  * [java](/dev/java)
 * [读书](/reading)
   * [佛教](/reading/fojiao)
     * [心经](/reading/fojiao/xinjing)
