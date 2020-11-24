@@ -5,7 +5,7 @@ tags:
 ---
 * [首页](/home)
 * [技术](/tech)
-  * [LeetCode](/tech/leetCode)
+  * [LeetCode](/tech/leetCode/leetCode)
     * [122. 买卖股票的最佳时机II](/tech/leetCode/122买卖股票的最佳时机II)
 * [工具](/tools)
   * [软件配置](/tools/软件配置)
