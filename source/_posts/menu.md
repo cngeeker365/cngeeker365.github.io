@@ -4,7 +4,7 @@ date: 2019-10-17 11:34:57
 tags:
 ---
 * [首页](/home)
-* [产品设计](/产品设计/目录)
+* [产品设计](/pm/目录)
 * [技术](/tech)
   * [LeetCode](/tech/leetCode/leetCode)
 * [工具](/tools)
@@ -19,6 +19,4 @@ tags:
     * [药师经](/reading/fojiao/yaoshijing)
       * [经文](/reading/fojiao/yaoshijing/jingwen)
       * [药师经的济世观](/reading/fojiao/yaoshijing/jishiguan)
-* 生活
-* 乱弹
 
