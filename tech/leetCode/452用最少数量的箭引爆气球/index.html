@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.ico" />
+    
+
+    <title>
+        
+          tech/leetCode/452用最少数量的箭引爆气球 - 桃白白の野望
+        
+    </title>
+
+    <!-- Spectre.css framework (v0.5.8) -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <!-- Noto Sans SC -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
+    <!-- Noto Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <!-- theme css & js -->
+    <link rel="stylesheet" href="/css/spectre_custom.css">
+    <link rel="stylesheet" href="/css/book.css">
+    <script src="/js/book.js"></script>
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+</head>
+
+<body>
+
+<div class="container">
+  <div class="book-container">
+    <div class="columns">
+      <div class="column col-2 hide-lg">
+        <div class="book-sidebar">
+  <h4 class="site-meta">
+    <a href="/">桃白白の野望</a>
+  </h4>
+  <div class="sidebar-content">
+    <ul>
+<li><a href="/home">首页</a></li>
+<li><a href="/tech">技术</a>
+<ul>
+<li><a href="/tech/leetCode/leetCode">LeetCode</a>
+<ul>
+<li><a href="/tech/leetCode/122%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAII">122. 买卖股票的最佳时机II</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/tools">工具</a>
+<ul>
+<li><a href="/tools/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE">软件配置</a>
+<ul>
+<li><a href="/tools/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/mac%E9%85%8D%E7%BD%AE">Mac配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/dev">开发</a>
+<ul>
+<li><a href="/dev/golang">golang</a>
+<ul>
+<li><a href="/dev/golang/test">test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/reading">读书</a>
+<ul>
+<li><a href="/reading/fojiao">佛教</a>
+<ul>
+<li><a href="/reading/fojiao/xinjing">心经</a></li>
+<li><a href="/reading/fojiao/yaoshijing">药师经</a>
+<ul>
+<li><a href="/reading/fojiao/yaoshijing/jingwen">经文</a></li>
+<li><a href="/reading/fojiao/yaoshijing/jishiguan">药师经的济世观</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>生活</li>
+<li>乱弹</li>
+</ul>
+
+  </div>
+</div>
+
+<script src="/js/book-sidebar.js"></script>
+      </div>
+
+      <div class="column col-8 col-lg-12">
+        <div class="book-content">
+          <div class="book-navbar">
+  <header class="navbar">
+  <section class="navbar-section">
+    <img class="navbar-icon" src="/favicon.ico">
+  </section>
+  <section class="navbar-center">
+    桃白白の野望
+  </section>
+  <section class="navbar-section">
+    <label class="accordion-header c-hand" for="accordion-sidebar">
+      <i class="icon icon-menu"></i>
+    </label>
+  </section>
+</header>
+
+<div class="accordion">
+  <input type="checkbox" id="accordion-sidebar" name="accordion-checkbox" hidden>
+  <div class="accordion-body">
+    <ul>
+<li><a href="/home">首页</a></li>
+<li><a href="/tech">技术</a>
+<ul>
+<li><a href="/tech/leetCode/leetCode">LeetCode</a>
+<ul>
+<li><a href="/tech/leetCode/122%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAII">122. 买卖股票的最佳时机II</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/tools">工具</a>
+<ul>
+<li><a href="/tools/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE">软件配置</a>
+<ul>
+<li><a href="/tools/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/mac%E9%85%8D%E7%BD%AE">Mac配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/dev">开发</a>
+<ul>
+<li><a href="/dev/golang">golang</a>
+<ul>
+<li><a href="/dev/golang/test">test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/reading">读书</a>
+<ul>
+<li><a href="/reading/fojiao">佛教</a>
+<ul>
+<li><a href="/reading/fojiao/xinjing">心经</a></li>
+<li><a href="/reading/fojiao/yaoshijing">药师经</a>
+<ul>
+<li><a href="/reading/fojiao/yaoshijing/jingwen">经文</a></li>
+<li><a href="/reading/fojiao/yaoshijing/jishiguan">药师经的济世观</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>生活</li>
+<li>乱弹</li>
+</ul>
+
+  </div>
+</div>
+</div>
+
+<div class="book-post">
+  <h3 id="452-用最少数量的箭引爆气球"><a href="https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/" target="_blank" rel="noopener">452. 用最少数量的箭引爆气球</a></h3>
+<p>@2020-11-24    没有解题思路，参考了官方思路和答案</p>
+<pre><code>	【题目解析】
+		（1）要使每只箭射中尽可能多的气球 ==&gt; 误区：容易盯着气球不放
+		（2）每个气球的位置是固定的
+		 解题的关键是：找出放箭的位置，使每只箭引爆数量最大
+	
+	【解题思路】
+	     每只箭要引爆最大数量，那么必然满足：
+	  			a. 箭是贴着某个气球的边缘射出的，且必然是右边缘（因右边缘才能与其他气球左边缘交叉时，可射中两个）
+	  			b. 从某个右边缘射出一箭，若要最大化引爆量，那么必然满足：
+	  					i. 右边缘位置（即放箭位置） &lt;= 所有被射中气球的右边缘位置
+	  				 ii. 所有被射中气球的左边缘位置 &lt;= 右边缘位置（即放箭位置）
+	          iii. 所有未被射中气球的左边缘位置 &gt; 右边缘位置（即放箭位置）
+	           iv. 下一支箭的位置 = 所有未被射中气球中最小的右边缘位置
+	     
+	     经过上述分析，题目涉及两类算法：
+	     		* 排序算法
+	     		* 贪心算法
+</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findMinArrowShots</span><span class="params">(<span class="keyword">int</span>[][] points)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (points.length == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//对气球右端按照有小到大排序</span></span><br><span class="line">        <span class="comment">//每个point由左端点point[0]和右端点point[1]构成</span></span><br><span class="line">        Arrays.sort(points, <span class="keyword">new</span> Comparator&lt;<span class="keyword">int</span>[]&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span>[] point1, <span class="keyword">int</span>[] point2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(point1[<span class="number">1</span>]&gt;point2[<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">1</span> ;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(point1[<span class="number">1</span>]&lt;point2[<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="keyword">return</span> -<span class="number">1</span> ;</span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> pos = points[<span class="number">0</span>][<span class="number">1</span>]; <span class="comment">//第一只箭必然是从第一个气球的右端点放出</span></span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1</span>; <span class="comment">//必然至少一支箭</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] balloon: points) &#123;</span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">             * 1. 排序后的气球，箭必然从每个气球的右端点放出</span></span><br><span class="line"><span class="comment">             * 2. 若某个气球的左端点 &gt; 放出箭的气球的右端点，意味着：</span></span><br><span class="line"><span class="comment">             *    （1）两个气球没有交集，因有序所以后面气球也如此</span></span><br><span class="line"><span class="comment">             *    （2）当前放出的箭达到了能射中的最大值，需要再放一只新的箭</span></span><br><span class="line"><span class="comment">             *    （3）新箭放出的位置 = 未被上支箭射中的第一个气球的右端点</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            <span class="keyword">if</span>(balloon[<span class="number">0</span>]&gt;pos)&#123;</span><br><span class="line">                pos = balloon[<span class="number">1</span>];</span><br><span class="line">                ans = ans + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+  </div>
+
+
+<script src="/js/book-post.js"></script>
+        </div>
+      </div>
+
+      <div class="column col-2 hide-lg">
+        <div class="book-toc">
+  <div class="book-tocbot">
+  </div>
+  <div class="book-tocbot-menu">
+    <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+    <a onclick="go_top()">Back to top</a>
+    <a onclick="go_bottom()">Go to bottom</a>
+  </div>
+</div>
+
+<script>
+tocbot.init({
+  tocSelector: '.book-tocbot',
+  contentSelector: '.book-post',
+  headingSelector: 'h1, h2, h3, h4, h5',
+  collapseDepth: 2,
+  orderedList: false,
+  scrollSmooth: false,
+});
+
+function expand_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 6,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "collapse_toc()");
+  b.innerHTML = "Collapse all"
+}
+
+function collapse_toc(){
+  var b = document.querySelector(".book-toc-expand");
+  tocbot.init({
+    tocSelector: '.book-tocbot',
+    contentSelector: '.book-post',
+    headingSelector: 'h1, h2, h3, h4, h5',
+    collapseDepth: 2,
+    orderedList: false,
+    scrollSmooth: false,
+  });
+  b.setAttribute("onclick", "expand_toc()");
+  b.innerHTML = "Expand all"
+}
+
+function go_top() {
+  window.scrollTo(0, 0);
+}
+
+function go_bottom() {
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+</script>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
