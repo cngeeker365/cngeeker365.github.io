@@ -11,7 +11,7 @@
 
     <title>
         
-          tech/leetCode/122买卖股票的最佳时机II - 桃白白の野望
+          产品设计/自定义表单 - 桃白白の野望
         
     </title>
 
@@ -179,39 +179,7 @@
 </div>
 
 <div class="book-post">
-  <h3 id="122-买卖股票的最佳时机-ii"><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/" target="_blank" rel="noopener">122. 买卖股票的最佳时机 II</a></h3>
-<p>@2020-11-05</p>
-<pre><code>最开始看到这个题目的时候，误以为是要根据现有数据来计算趋势，并判断另一组数据中要买入哪些。
-
-后来发现，其实该问题要的是利润最大化，于是有了几个思路。
-</code></pre>
-<h4 id="1-思路一">1. 思路一</h4>
-<pre><code>类似于股票中的“蜡烛图”，红色为涨，绿色为跌，利润最大化=所有红色蜡烛的合计。
-
-这种简化的方法，不需要找出所有的“峰值”、“谷值”、“顺序”。
-</code></pre>
-<img src="https://shine365-markdown-pic.oss-ap-southeast-1.aliyuncs.com/img/image-20201124203002526.png" alt="image-20201124203002526" style="zoom:50%;" />
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> maxProfit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; prices.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> tempProfit = prices[i] - prices[i-<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span>(tempProfit &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                maxProfit = tempProfit + maxProfit;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxProfit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>时间复杂度：O(n)，仅遍历一次</li>
-<li>空间复杂度：O(1)，需要常量的空间</li>
-</ul>
-<h4 id="2-思路二">2. 思路二</h4>
-<pre><code>其实这个思路是 “思路一”的源头。即要获得最大利润，就要知道所有的谷及其后紧邻的峰，实现“低买高卖”。
-</code></pre>
-<img src="https://shine365-markdown-pic.oss-ap-southeast-1.aliyuncs.com/img/image-20201105220430899.png" style="zoom:50%;"/>
-$$
-TotalProfits = \sum_{i}(Height(Peak_i) - Height(Valley_i))
-$$
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> valley = prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> peak = prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> maxprofit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; prices.length - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">while</span> (i &lt; prices.length - <span class="number">1</span> &amp;&amp; prices[i] &gt;= prices[i + <span class="number">1</span>])</span><br><span class="line">                i++;</span><br><span class="line">            valley = prices[i];</span><br><span class="line">            <span class="keyword">while</span> (i &lt; prices.length - <span class="number">1</span> &amp;&amp; prices[i] &lt;= prices[i + <span class="number">1</span>])</span><br><span class="line">                i++;</span><br><span class="line">            peak = prices[i];</span><br><span class="line">            maxprofit += peak - valley;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxprofit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>时间复杂度：O(n)。遍历一次。</li>
-<li>空间复杂度：O(1)。需要常量的空间。</li>
-</ul>
-<h4 id="3-思路三">3. 思路三</h4>
-<pre><code>关于这一条，其实是从 LeetCode 的解题思路中看到的，要计算所有可能的交易组合。
-
-太麻烦就没有继续看了。</code></pre>
+  <h3 id="自定义表单">自定义表单</h3>
 
 </div>
 
